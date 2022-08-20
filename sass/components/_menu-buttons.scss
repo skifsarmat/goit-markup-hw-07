@@ -1,0 +1,41 @@
+.menu {
+  background-color: var(--background-color);
+}
+
+.menu-list {
+  @include display-flex($d, null, $jc);
+  // display: flex;
+  // justify-content: center;
+  gap: 8px;
+  margin-bottom: 50px;
+}
+
+.menu-item {
+}
+
+.menu-button {
+  font-family: inherit;
+  @include fonts(500, 16px, 1.62, $ls);
+  // font-weight: 500;
+  // font-size: 16px;
+  // line-height: 1.62;
+  // letter-spacing: 0.03em;
+  text-align: center;
+  cursor: pointer;
+  color: var(--primary-text-color);
+  padding: 6px 22px;
+  border-radius: 4px;
+  border-color: transparent;
+  @include animation(box-shadow, color, background-color, $time, $func);
+  // transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  //   color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  //   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .current-button,
+  &:hover,
+  &:focus {
+    color: var(--button-text);
+    background-color: var(--hover-button);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}

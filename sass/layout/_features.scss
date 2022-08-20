@@ -1,0 +1,38 @@
+.features-list {
+  display: flex;
+  margin: -15px;
+}
+
+.features-item {
+  margin: 15px;
+  flex-basis: calc(100% / 4 - 30px);
+}
+
+.page-icons {
+  @include display-flex($d, $ai, $jc);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  margin-bottom: 30px;
+  gap: 30px;
+  width: 270px;
+  height: 120px;
+  background-color: var(--our-team-background);
+  border-radius: 4px;
+}
+
+.page-social-icon {
+  fill: var(--primary-text-color);
+}
+
+.features-sub-title {
+  margin-bottom: 10px;
+  @include fonts(700, 14px, 1.14, 0.03em);
+  text-transform: uppercase;
+  color: var(--primary-text-color);
+}
+
+.features-description {
+  @include fonts(null, $fs, 1.71, $ls);
+  color: var(--secondary-text-color);
+}
