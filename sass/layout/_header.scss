@@ -5,9 +5,8 @@
   background-color: var(--background-color);
   border-bottom: 1px solid #ececec;
   & > .container {
-    @include display-flex($d, $ai, null);
-    // display: flex;
-    // align-items: center;
+    display: flex;
+    align-items: center;
   }
 }
 
