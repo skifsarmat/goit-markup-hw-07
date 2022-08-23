@@ -688,7 +688,8 @@ img {
   background-color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.networks__link:hover, .networks__link:focus {
+.networks__link .networks__link:hover,
+.networks__link .networks__link:focus {
   background-color: var(--hover-color);
 }
 
@@ -697,7 +698,8 @@ img {
   fill: var(--icon-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.networks__link:hover .networks__icon, .networks__link:focus .networks__icon {
+.networks__icon .networks__link:hover .networks__icon,
+.networks__icon .networks__link:focus .networks__icon {
   fill: var(--button-text);
 }
 
