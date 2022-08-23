@@ -12,18 +12,20 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  .container {
-    width: 696px;
-  }
+}
+
+.hero .container {
+  width: 696px;
 }
 
 .features-main {
   margin-bottom: 20px;
   text-align: center;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
+  @include font(900, 44px, 1.36, 0.06em);
+  // font-weight: 900;
+  // font-size: 44px;
+  // line-height: 1.36;
+  // letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--background-color);
 }

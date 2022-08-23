@@ -1,13 +1,9 @@
 .header {
-  @include display-flex($d, $ai, null);
+  @include display(flex, center, null);
   // display: flex;
   // align-items: center;
   background-color: var(--background-color);
   border-bottom: 1px solid #ececec;
-  & > .container {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .navigation {
@@ -20,41 +16,43 @@
   gap: 50px;
 }
 
-.navigation__list-item {
+.navigation__item {
   display: block;
 }
 
 .navigation__link {
   padding: 30px 0;
   display: block;
-  @include fonts(500, $fs, 1.14, 0.02em) // font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.14;
-    // letter-spacing: 0.02em;
-    color: var(--primary-text-color);
-  @include animation(color, null, null, $time, $func);
-  // transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  .current-page,
-  &:hover,
-  &:focus {
-    color: var(--hover-color);
-  }
+  @include font(500, 14px, 1.14, 0.02em);
+  // font-weight: 500;
+  // font-size: 14px;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .current-page {
   color: var(--hover-color);
   position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    display: block;
-    width: 100%;
-    height: 4px;
-    background-color: var(--hover-color);
-    border-radius: 2px;
-  }
+}
+
+.current-page::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: var(--hover-color);
+  border-radius: 2px;
+}
+
+.current-page,
+.header-link:hover,
+.header-link:focus {
+  color: var(--hover-color);
 }
 
 .contacts {
@@ -63,20 +61,21 @@
   margin-left: auto;
 }
 
-.contacts__item {
-}
+/* .contacts-item {
+} */
 
 .contacts__mail {
   padding-top: 32px;
   padding-bottom: 32px;
-  @include display-flex($d, $ai, null);
+  @include display(flex, center, null);
   // display: flex;
   // align-items: center;
-  @include fonts(500, $fs, 1.14, 0.02em) // font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.14;
-    // letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
+  @include font(500, 14px, 1.14, 0.02em);
+  // font-weight: 500;
+  // font-size: 14px;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
@@ -87,14 +86,15 @@
 .contacts__tel {
   padding-top: 32px;
   padding-bottom: 32px;
-  @include display-flex($d, $ai, null);
+  @include display(flex, center, null);
   // display: flex;
   // align-items: center;
-  @include fonts(500, $fs, 1.14, 0.02em) // font-weight: 500;
-    // font-size: 14px;
-    // line-height: 1.14;
-    // letter-spacing: 0.02em;
-    color: var(--secondary-text-color);
+  @include font(500, 14px, 1.14, 0.02em);
+  // font-weight: 500;
+  // font-size: 14px;
+  // line-height: 1.14;
+  // letter-spacing: 0.02em;
+  color: var(--secondary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {

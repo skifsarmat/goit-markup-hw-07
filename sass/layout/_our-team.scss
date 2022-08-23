@@ -2,18 +2,14 @@
   background-color: var(--our-team-background);
 }
 
-.team {
-  padding: 30px 0;
-}
-
 .our-team__title {
   text-align: center;
   margin-bottom: 50px;
-  @include fonts(700, 36px, 1.16, $ls);
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
-  letter-spacing: 0.03em;
+  @include font(700, 36px, 1.16, 0.03em);
+  // font-weight: 700;
+  // font-size: 36px;
+  // line-height: 1.16;
+  // letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
@@ -30,16 +26,17 @@
 }
 
 .team {
+  padding: 30px 0;
 }
 
 .team__emoloyees {
   margin-bottom: 10px;
-  @include fonts(500, 16px, 1.18, $ls);
+  @include font(500, 16px, 1.18, 0.03em);
   // font-weight: 500;
   // font-size: 16px;
   // line-height: 1.18;
-  // text-align: center;
   // letter-spacing: 0.03em;
+  text-align: center;
   color: var(--primary-text-color);
 }
 
@@ -57,20 +54,19 @@
   gap: 10px;
 }
 
-.networks__item {
-}
+/* .team-social-item {
+} */
 
 .networks__link {
   border-radius: 50%;
   width: 44px;
   height: 44px;
-  @include display-flex($d, $ai, $jc);
+  @include display(flex, center, center);
   // display: flex;
   // align-items: center;
   // justify-content: center;
   background-color: transparent;
-  @include animation(background-color, null, null, $time, $func);
-  // transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
     background-color: var(--hover-color);
@@ -80,10 +76,9 @@
 .networks__icon {
   display: inline-flex;
   fill: var(--icon-color);
-  @include animation(fill, null, null, $time, $func);
-  // transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  .networks__link:hover &,
-  .networks__link:focus & {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .team-social-link:hover &,
+  .team-social-link:focus & {
     fill: var(--button-text);
   }
 }

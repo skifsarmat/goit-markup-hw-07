@@ -3,19 +3,19 @@
 }
 
 .menu-list {
-  @include display-flex($d, null, $jc);
+  @include display(flex, null, center);
   // display: flex;
   // justify-content: center;
   gap: 8px;
   margin-bottom: 50px;
 }
 
-.menu-item {
-}
+/* .menu-item {
+} */
 
 .menu-button {
   font-family: inherit;
-  @include fonts(500, 16px, 1.62, $ls);
+  @include font(500, 16px, 1.62, 0.03em);
   // font-weight: 500;
   // font-size: 16px;
   // line-height: 1.62;
@@ -26,10 +26,9 @@
   padding: 6px 22px;
   border-radius: 4px;
   border-color: transparent;
-  @include animation(box-shadow, color, background-color, $time, $func);
-  // transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  //   color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-  //   background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   .current-button,
   &:hover,
   &:focus {

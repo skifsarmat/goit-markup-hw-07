@@ -5,7 +5,7 @@
 .our-job-title {
   text-align: center;
   margin-bottom: 50px;
-  @include fonts(700, 36px, 1.16, $ls);
+  @include font(700, 36px, 1.16, 0.03em);
   // font-weight: 700;
   // font-size: 36px;
   // line-height: 1.16;
@@ -29,16 +29,16 @@
   height: 70px;
   position: absolute;
   bottom: 0;
-  @include fonts(700, $fs, 1.14, $ls);
+  @include font(700, 14px, 1.14, 0.03em);
   // font-weight: 700;
   // font-size: 14px;
   // line-height: 1.14;
   // letter-spacing: 0.03em;
-  @include display-flex($d, $ai, $jc);
+  @include display(flex, center, center);
   // display: flex;
-  // text-align: center;
+  // align-items: center;
   // justify-content: center;
-
+  text-align: center;
   text-transform: uppercase;
   color: var(--button-text);
 }

@@ -1,22 +1,25 @@
 .footer {
   padding: 60px 0;
   background-color: var(--footer-background);
-  & .container {
-    display: flex;
-    align-items: baseline;
-  }
 }
 
-.footer-contacts {
+.footer .container {
+  display: flex;
+  align-items: baseline;
 }
+
+/* .footer-contacts {
+} */
 
 .address {
   color: var(--button-text);
-  @include fonts(normal, $fs, 1.7, null);
-  // font-style: normal;
-  // font-size: 14px;
-  // line-height: 1.7;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.7;
 }
+
+/* .footer-list {
+} */
 
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
@@ -24,10 +27,10 @@
 
 .footer-address {
   margin-bottom: 9px;
-  @include fonts(400, $fs, 1.71, $ls);
-  // font-weight: 400;
+  @include font(700, 14px, 1.14, 0.03em);
+  // font-weight: 700;
   // font-size: 14px;
-  // line-height: 1.71;
+  // line-height: 1.14;
   // letter-spacing: 0.03em;
   color: var(--button-text);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -38,7 +41,7 @@
 }
 
 .footer-tel {
-  @include fonts(null, $fs, 1.71, $ls);
+  @include font(null, 14px, 1.71, 0.03em);
   // font-size: 14px;
   // line-height: 1.71;
   // letter-spacing: 0.03em;
@@ -51,7 +54,10 @@
 }
 
 .footer-mail {
-  @include fonts(null, $fs, 1.71, $lh);
+  @include font(null, 14px, 1.71, 0.03em);
+  // font-size: 14px;
+  // line-height: 1.71;
+  // letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
